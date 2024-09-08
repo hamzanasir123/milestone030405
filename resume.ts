@@ -126,7 +126,7 @@ skillCheckboxes.forEach((checkbox) => {
 if (skillsDisplay.innerHTML === '') {
     skillsDisplay.textContent = 'No Skills Selected';
 }
-})
+
 editButton.addEventListener("click", function () {
     
     aboutMe.contentEditable = "true";
@@ -166,6 +166,7 @@ generateLinkButton.addEventListener("click", function () {
     resumeLink.textContent = url;
 });
 
+})
 
 // downloadButton.addEventListener("click", function () {
 //     const doc = new jsPDF();
