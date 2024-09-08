@@ -4,92 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
-    <link href="/style.css" rel="stylesheet">
+    <link href="/resume.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
     <script src="/resume.js" defer></script>
-    <strong><span id="name1"></span></strong>
-        <strong id="name2" ></strong>
-        <p class="p"></p>
-    <main class="container">
-        <div class="main">
-        <h1>ABOUT ME</h1>
-        <hr>
-        <p>
-        </p>
+    <br>
+    <h1 id="msg">Editable Resume Builder by Hamza Nasir</h1>
+    <form id="form">
         <br>
-        <h1>CONTACT</h1>
+        <h1>Fill This Form To Create A Resume</h1>
         <hr>
-        <h4>Address</h4>
-        <p></p>
-        <hr>
-        <h4>Mobile</h4>
-        <p></p>
-        <hr>
-        <h4>Home</h4>
-        <p></p>
-        <hr>
-        <h4>Email</h4>
-        <p></p>
+        <h1>Personal Information</h1>
+    <label for="name" id="lable">First Name:</label>
+    <input type="text" id="firstName" name="name" placeholder="Enter your firstName..." >
+    <br>
+    <label for="name" id="lable">Last Name:</label>
+    <input type="text" id="lastName" name="name" placeholder="Enter your lastName..." >
+    <br>
+    <label for="designation" id="lable">Designation:</label>
+    <input type="text" id="userDesignation" name="designation" placeholder="Full Stack Devoloper..." >
+    <br>
+    <label for="aboutme" id="lable">About Me:</label>
+    <textarea id="useraboutme" name="aboutme" rows="4" cols="30" placeholder="Write About You..." ></textarea>
+    <br>
+    <label for="address" id="lable">Address:</label>
+    <textarea id="useraddress" name="address" rows="4" cls="30" placeholder="Write Your Address..." ></textarea>
+    <br>
+    <label for="mobileno" id="lable">Mobile No:</label>
+    <input type="number" id="usermobileno" name="mobileno" placeholder="Write Your Mobile Number...">
+    <br>
+    <label for="homeno" id="lable">Home No:</label>
+    <input type="number" id="userhomeno" name="homeno" placeholder="Write Your Home Number..." >
+    <br>
+    <label for="email" id="lable">Email:</label>
+    <br>
+    <input type="email" id="useremail" name="email" placeholder="Write Your Email..." >
+    <br>
+    <br>
+    <h1>Education</h1>
+    <label for="matric" id="lable">Matric:</label>
+    <br>
+<input type="text" id="usermatric" name="matric" placeholder="Write Your School Name..." >
+<br>
+<label for="intermadiate" id="lable">Intermadiate:</label>
+<input type="text" id="userintermadiate" name="intermadiate" placeholder="Write Your Collage Name..." >
+<br>
+<label for="graduation" id="lable">Graduation:</label>
+<input type="text" id="usergraduation" name="graduation" placeholder="Write Your University Name...">
+<br>
+<h1>Experience</h1>
+<textarea id="userexperience"  rows="3" cols="30" placeholder="Write Your Experience" ></textarea>
+<br>
+    <h1>Skills</h1>
+    <br>
+    <label>
+        <input type="checkbox" id="skills1" value="html"> HTML
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" id="skills2" value="css"> CSS
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" id="skills3" value="javascript"> JavaScript
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" id="skills4" value="typescript"> TypeScript
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" id="skills5" value="python"> Reactjs
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" id="skills6" value="java"> Nextjs
+    </label>
+    <br>
+    <br>
+<br>
+<br>
+<label for="imageUpload">Upload Image:</label>
+<input type="file" id="userimg" name="image" accept="image/*" >
+<br>
+<button id="generate" type="submit">Generate</button>
+<br>
+<br>
+<br>
+    </form>
+    <br>
+    <div id="container">
+    <div id="resume">
+        <img 
+        id="img"
+        src=""
+        alt="Img">
+        <br>
+    <strong><span id="fName"></span></strong>
+    <strong><span id="lName" ></span></strong>
+    <p><span id="designation"></span></p>
+<main class="container">
+    <div class="main">
+    <h1>ABOUT ME</h1>
+    <hr>
+    <p><span id="aboutme" class="editable" contenteditable="false" ></span></p>
+    <br>
+    <h1>CONTACT</h1>
+    <hr>
+    <h4>Address</h4>
+    <p><span id="address" class="editable" contenteditable="false"></span></p>
+    <hr>
+    <h4>Mobile</h4>
+    <p><span id="mobileno" class="editable" contenteditable="false"></span></p>
+    <hr>
+    <h4>Home</h4>
+    <p><span id="homeno" class="editable" contenteditable="false" ></span></p>
+    <hr>
+    <h4>Email</h4>
+    <p><span id="email" class="editable" contenteditable="false"  ></span></p>
 
-        <br>
-        <br>
-        <h1>SKILLS</h1>
-        <hr>
-        <strong>Html</strong>
-        <br>
-        <br>
-        <strong>Css</strong>
-        <br>
-        <br>
-        <strong>TypeScript</strong>
-        <br>
-        <div id="skills-section">
-        <br>
-        <strong>JavaScript</strong>
-        <br>
-        <br>
-        <strong>Reactjs</strong>
-        <br>
-        <br>
-        <strong>Nextjs</strong>
-        <br>
-        </div>
-        <br>
-        <button id="toggle-skills">Show Skills</button>
+    <br>
+    <br>
+    <h1>SKILLS</h1>
+    <hr>
+    <strong><div id="skillsDisplay"></div></strong>
+    <br>
+    <br>
+    <strong></strong>
+    <br>
+    <br>
+    <strong></strong>
+    <br>
+    <div id="skills-section">
+    <br>
+    <strong></strong>
+    <br>
+    <br>
+    <strong></strong>
+    <br>
+    <br>
+    <strong></strong>
+    <br>
+    </div>
+    <br>
 </div>
 <div class="main">
-        <h1>EXPERIENCE</h1>
-        <hr>
-        <h4>Fresh</h4>
-        <br>
-        <h1>EDUCATION</h1>
-        <hr>
-        <h2>Full Stack Devolopment</h2>
-        <h4>Governor House</h4>
-        <p>In Process</p>
-        <hr>
-        <h2>Graduation</h2>
-        <h4>NED University</h4>
-        <p>In Process</p>
-        <hr>
-        <h2>InterMaidiate</h2>
-        <h4>Nabi Bagh Z.M Collage</h4>
-        <p>Complete.</p>
-        <hr>
-        <h2>Matric</h2>
-        <h4>Oxford Accademy English School</h4>
-        <p>Complete.</p>
-        <br>
+    <h1>EXPERIENCE</h1>
+    <hr>
+    <p id="experience" class="editable" contenteditable="false"></p>
+    <br>
+    <h1>EDUCATION</h1>
+    <hr>
+    <h2>Full Stack Devolopment</h2>
+    <h4>Governor House</h4>
+    <p>In Process</p>
+    <hr>
+    <h2>Graduation</h2>
+    <h4><span id="graduation" class="editable" contenteditable="false" ></span></h4>
+    <p>Completed</p>
+    <hr>
+    <h2>InterMaidiate</h2>
+    <h4><span id="intermadiate" class="editable" contenteditable="false" ></span></h4>
+    <p>Complete.</p>
+    <hr>
+    <h2>Matric</h2>
+    <h4><span id="matric" class="editable" contenteditable="false" ></span></h4>
+    <p>Complete.</p>
+    <br>
 
-        <h1>REFERENCE</h1>
-        <hr>
-        <h2>Ameen Alam</h2>
-        <h4>Director</h4>
-        <p>03043866719</p>
+    <h1>REFERENCE</h1>
+    <hr>
+    <h2>Ameen Alam</h2>
+    <h4>Director</h4>
+    <p>03043866719</p>
 
-        
+    
 </div>
+
 </main>
+<button id="editResume">Edit Resume</button>
+<button id="saveResume" class="hidden">Save Resume</button>
+<button id="downloadResume">Download</button>
+<button id="generateLink" class="hidden">Generate Link</button>
+<div id="shareLink" class="hidden">
+    <p>Share your resume: <a id="resumeLink" href="#" target="_blank">Your Resume Link</a></p>
+</div>
+    </div>
+    </div>
 </body>
 </html>
