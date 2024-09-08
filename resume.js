@@ -1,79 +1,77 @@
 // import { jsPDF } from "jspdf";
-document.addEventListener("DOMContentLoaded", function () {
-    var form = document.getElementById("form");
-    var resume = document.getElementById("resume");
-    var skillsSection = document.getElementById('skills-section');
-    var img = document.getElementById("userimg");
-    var userImg = document.getElementById("img");
-    var myName = document.getElementById('fName');
-    var userName = document.getElementById('firstName');
-    var lastName = document.getElementById('lName');
-    var userLastName = document.getElementById('lastName');
-    var userDesignation = document.getElementById('userDesignation');
-    var designation = document.getElementById('designation');
-    var userAboutMe = document.getElementById('useraboutme');
-    var aboutMe = document.getElementById('aboutme');
-    var userAddress = document.getElementById('useraddress');
-    var address = document.getElementById('address');
-    var userMobileNo = document.getElementById('usermobileno');
-    var mobileNo = document.getElementById('mobileno');
-    var userHomeNo = document.getElementById('userhomeno');
-    var homeNo = document.getElementById('homeno');
-    var userEmail = document.getElementById('useremail');
-    var email = document.getElementById('email');
-    var userGraduate = document.getElementById('usergraduation');
-    var graduate = document.getElementById('graduation');
-    var userIntermadiate = document.getElementById('userintermadiate');
-    var intermadiate = document.getElementById('intermadiate');
-    var userMatric = document.getElementById('usermatric');
-    var matric = document.getElementById('matric');
-    var userExperience = document.getElementById('userexperience');
-    var experience = document.getElementById('experience');
-    var editButton = document.getElementById("editResume");
-    var saveButton = document.getElementById("saveResume");
-    var downloadButton = document.getElementById("downloadResume");
-    var generateLinkButton = document.getElementById("generateLink");
-    var shareLinkDiv = document.getElementById("shareLink");
-    var resumeLink = document.getElementById("resumeLink");
-    var skillsDisplay = document.getElementById("skillsDisplay");
-    var skillCheckboxes = [
-        document.getElementById("skills1"),
-        document.getElementById("skills2"),
-        document.getElementById("skills3"),
-        document.getElementById("skills4"),
-        document.getElementById("skills5"),
-        document.getElementById("skills6")
-    ];
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        form.style.display = 'none';
-        resume.style.display = "block";
-        skillsSection.style.display = 'none';
-        var enteredName = userName.value;
-        myName.textContent = enteredName;
-        var enteredLastName = userLastName.value;
-        lastName.textContent = enteredLastName;
-        var enteredDesignation = userDesignation.value;
-        designation.textContent = enteredDesignation;
-        var enteredAboutMe = userAboutMe.value;
-        aboutMe.textContent = enteredAboutMe;
-        var enteredAddress = userAddress.value;
-        address.textContent = enteredAddress;
-        var enteredMobileNo = userMobileNo.value;
-        mobileNo.textContent = enteredMobileNo;
-        var enteredHomeNo = userHomeNo.value;
-        homeNo.textContent = enteredHomeNo;
-        var enterdEmail = userEmail.value;
-        email.textContent = enterdEmail;
-        var enteredGraduated = userGraduate.value;
-        graduate.textContent = enteredGraduated;
-        var enterdIntermadiate = userIntermadiate.value;
-        intermadiate.textContent = enterdIntermadiate;
-        var enteredMatric = userMatric.value;
-        matric.textContent = enteredMatric;
-        var enteredExperience = userExperience.value;
-        experience.textContent = enteredExperience.length > 0 ? enteredExperience : "No Experience Provided";
-    });
+var form = document.getElementById("form");
+var resume = document.getElementById("resume");
+var skillsSection = document.getElementById('skills-section');
+var img = document.getElementById("userimg");
+var userImg = document.getElementById("img");
+var myName = document.getElementById('fName');
+var userName = document.getElementById('firstName');
+var lastName = document.getElementById('lName');
+var userLastName = document.getElementById('lastName');
+var userDesignation = document.getElementById('userDesignation');
+var designation = document.getElementById('designation');
+var userAboutMe = document.getElementById('useraboutme');
+var aboutMe = document.getElementById('aboutme');
+var userAddress = document.getElementById('useraddress');
+var address = document.getElementById('address');
+var userMobileNo = document.getElementById('usermobileno');
+var mobileNo = document.getElementById('mobileno');
+var userHomeNo = document.getElementById('userhomeno');
+var homeNo = document.getElementById('homeno');
+var userEmail = document.getElementById('useremail');
+var email = document.getElementById('email');
+var userGraduate = document.getElementById('usergraduation');
+var graduate = document.getElementById('graduation');
+var userIntermadiate = document.getElementById('userintermadiate');
+var intermadiate = document.getElementById('intermadiate');
+var userMatric = document.getElementById('usermatric');
+var matric = document.getElementById('matric');
+var userExperience = document.getElementById('userexperience');
+var experience = document.getElementById('experience');
+var editButton = document.getElementById("editResume");
+var saveButton = document.getElementById("saveResume");
+var downloadButton = document.getElementById("downloadResume");
+var generateLinkButton = document.getElementById("generateLink");
+var shareLinkDiv = document.getElementById("shareLink");
+var resumeLink = document.getElementById("resumeLink");
+var skillsDisplay = document.getElementById("skillsDisplay");
+var skillCheckboxes = [
+    document.getElementById("skills1"),
+    document.getElementById("skills2"),
+    document.getElementById("skills3"),
+    document.getElementById("skills4"),
+    document.getElementById("skills5"),
+    document.getElementById("skills6")
+];
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    form.style.display = 'none';
+    resume.style.display = "block";
+    skillsSection.style.display = 'none';
+    var enteredName = userName.value;
+    myName.textContent = enteredName;
+    var enteredLastName = userLastName.value;
+    lastName.textContent = enteredLastName;
+    var enteredDesignation = userDesignation.value;
+    designation.textContent = enteredDesignation;
+    var enteredAboutMe = userAboutMe.value;
+    aboutMe.textContent = enteredAboutMe;
+    var enteredAddress = userAddress.value;
+    address.textContent = enteredAddress;
+    var enteredMobileNo = userMobileNo.value;
+    mobileNo.textContent = enteredMobileNo;
+    var enteredHomeNo = userHomeNo.value;
+    homeNo.textContent = enteredHomeNo;
+    var enterdEmail = userEmail.value;
+    email.textContent = enterdEmail;
+    var enteredGraduated = userGraduate.value;
+    graduate.textContent = enteredGraduated;
+    var enterdIntermadiate = userIntermadiate.value;
+    intermadiate.textContent = enterdIntermadiate;
+    var enteredMatric = userMatric.value;
+    matric.textContent = enteredMatric;
+    var enteredExperience = userExperience.value;
+    experience.textContent = enteredExperience.length > 0 ? enteredExperience : "No Experience Provided";
     editButton.addEventListener("click", function () {
         aboutMe.contentEditable = "true";
         address.contentEditable = "true";

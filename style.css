@@ -144,7 +144,7 @@ img {
 @media (max-width: 768px) {
     #form {
         width: 95%;
-        margin-left: 0; 
+        margin-left: 9px; 
     }
 
     button {
@@ -193,6 +193,7 @@ img {
 
 @media (max-width: 480px) {
     #form {
+        margin-left: 9px;
         border-radius: 20px; 
         padding: 15px; 
     }

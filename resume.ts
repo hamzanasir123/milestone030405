@@ -1,5 +1,4 @@
 // import { jsPDF } from "jspdf";
-document.addEventListener("DOMContentLoaded", function () {
 const form = document.getElementById("form") as HTMLFormElement;
 const resume = document.getElementById("resume") as HTMLDivElement;
 
@@ -106,7 +105,6 @@ matric.textContent = enteredMatric;
 const enteredExperience = userExperience.value;
 experience.textContent = enteredExperience.length > 0 ? enteredExperience : "No Experience Provided";
 
-})
 
 
 editButton.addEventListener("click", function () {
