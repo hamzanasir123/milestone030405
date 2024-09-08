@@ -135,6 +135,9 @@ editButton.addEventListener("click", function () {
     email.contentEditable = "true";
     homeNo.contentEditable = "true";
     mobileNo.contentEditable = "true";
+    graduate.contentEditable = "true";
+    intermadiate.contentEditable = "true";
+    matric.contentEditable = "true";
 
    
     editButton.classList.add("hidden");
@@ -148,6 +151,9 @@ saveButton.addEventListener("click", function () {
     email.contentEditable = "false";
     homeNo.contentEditable = "false";
     mobileNo.contentEditable = "fasle";
+    graduate.contentEditable = "fasle";
+    intermadiate.contentEditable = "fasle";
+    matric.contentEditable = "fasle";
 
    
     saveButton.classList.add("hidden");
