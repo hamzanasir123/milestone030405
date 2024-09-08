@@ -1,71 +1,177 @@
 
-.name1 {
-    height: 50px;
-    font-size: 30px;
-    margin-left: 550px;
-    margin-right: auto; 
-    margin-top: 20px;
+body {
+    background-color: aqua;
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    padding: 0;
+}
+#msg{
     text-align: center;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
-.name2 {
-    height: 50px;
-    font-size: 30px;
-    color: gray;
-    text-align: center; 
+#lable{
+    font-size: 25px;
 }
-
-.p {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0px auto; 
+#form {
+    color: aliceblue;
+    margin: 0 auto; 
+    border-radius: 50px;
+    width: 90%;
+    max-width: 700px;
     text-align: center;
+    background-color: black;
+    padding: 20px; 
+    box-sizing: border-box; 
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap; 
+#firstName, #lastName, #userDesignation, #useraboutme, #useraddress, #usermobileno, #userhomeno, #useremail, #usermatric, #userintermadiate, #usergraduation, #userexperience{
+    color: black;
+    margin-bottom: 10px;
+    max-width: 600px; 
+    box-sizing: border-box;
+    width: 100%; 
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;   
 }
 
-.main {
-    font-size: 10px;
-    width: 40%;
-    flex: 1;
-    padding: 20px;
-    border: 1px solid #ccc;
-}
-button {
-    display: inline-block;
-    padding: 10px 20px;
+
+#editResume, #saveResume, #downloadResume, #generateLink{
+    margin-left: 350px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    font-weight: bolder;
+    height: 40px;
+    width: 150px;
+    margin-top: 10px;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+#shareLink{
+    text-align: center;
+}
+button {
+    border-radius: 30px;
+    font-weight: bolder;
+    height: 40px;
+    width: 150px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-
-
-p {
-    font-family: Arial, Helvetica, sans-serif;
+#resume {
+    display: none; 
 }
 
+#fName{
+    font-size: 40px;
+    margin-left: 570px;
+}
+
+#lName{
+    font-size: 40px;
+   
+}
+
+#lName {
+    color: gray;
+}
+
+#designation {
+    font-family: Arial, Helvetica, sans-serif; 
+    margin-left: 620px;
+}
+
+.editable {
+    border: 1px dashed gray;
+    border-radius: 5px;
+    padding: 5px;
+    min-height: 30px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.editable[contenteditable="true"]:focus {
+    outline: 2px solid #007bff;
+}
+
+.container {
+    color:black;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin: 0 auto; 
+    display: block; 
+}
+
+.main {
+    background-color:darkgray;
+    font-size: 10px;
+    width: 40%;
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
 
 @media (max-width: 768px) {
-     .name2 {
-        font-size: 24px;
-        margin: 10px 0;
+    #form {
+        width: 95%;
+        margin-left: 0; 
     }
-    .name1 {
-        font-size: 24px;
-        margin: 10px 0;
+
+    button {
+        width: 120px; 
+    }
+    #editResume, #saveResume, #downloadResume, #generateLink{
         margin-left: 150px;
+        margin-bottom: 20px;
+        border-radius: 30px;
+        font-weight: bolder;
+        height: 40px;
+        width: 130px;
+        margin-top: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px 20px;
+    }
+
+    #fName {
+        font-size: 24px;
+        margin-left: 170px;
+    }
+    #designation {
+        font-family: Arial, Helvetica, sans-serif; 
+        margin-left: 190px;
     }
 
     .container {
@@ -86,10 +192,44 @@ p {
 }
 
 @media (max-width: 480px) {
-    .name1, .name2 {
-        font-size: 18px;
+    #form {
+        border-radius: 20px; 
+        padding: 15px; 
     }
 
+    button {
+        width: 100px; 
+        height: 35px;
+    }
+    #editResume, #saveResume{
+        margin-left: 150px;
+        margin-bottom: 20px;
+        border-radius: 30px;
+        font-weight: bolder;
+        height: 40px;
+        width: 130px;
+        margin-top: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px 20px;
+    }
+
+    #designation {
+        font-family: Arial, Helvetica, sans-serif; 
+        margin-left: 190px;
+    }
+
+
+    #fName {
+        font-size: 30px;
+        margin-left: 150px;
+    }
+
+    #lName{
+        font-size: 30px;
+    }
     .main {
         width: 100%; 
         font-size: 10px;
@@ -99,4 +239,3 @@ p {
         margin: 0 10px; 
     }
 }
-
