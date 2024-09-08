@@ -120,16 +120,6 @@ generateLinkButton.addEventListener("click", function () {
     resumeLink.href = url;
     resumeLink.textContent = url;
 });
-// skillCheckboxes.forEach((checkbox) => {
-//     if (checkbox.checked) {
-//         const skillLine = document.createElement('p');
-//         skillLine.textContent = checkbox.value;
-//         skillsDisplay.appendChild(skillLine);
-//     }
-// });
-// if (skillsDisplay.innerHTML === '') {
-//     skillsDisplay.textContent = 'No Skills Selected';
-// }
 // downloadButton.addEventListener("click", function () {
 //     const doc = new jsPDF();
 //     doc.setFontSize(22);
