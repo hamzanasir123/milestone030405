@@ -72,34 +72,6 @@ form.addEventListener("submit", function (event) {
     matric.textContent = enteredMatric;
     var enteredExperience = userExperience.value;
     experience.textContent = enteredExperience.length > 0 ? enteredExperience : "No Experience Provided";
-    editButton.addEventListener("click", function () {
-        aboutMe.contentEditable = "true";
-        address.contentEditable = "true";
-        experience.contentEditable = "true";
-        email.contentEditable = "true";
-        homeNo.contentEditable = "true";
-        mobileNo.contentEditable = "true";
-        editButton.classList.add("hidden");
-        saveButton.classList.remove("hidden");
-    });
-    saveButton.addEventListener("click", function () {
-        aboutMe.contentEditable = "false";
-        address.contentEditable = "false";
-        experience.contentEditable = "false";
-        email.contentEditable = "false";
-        homeNo.contentEditable = "false";
-        mobileNo.contentEditable = "fasle";
-        saveButton.classList.add("hidden");
-        editButton.classList.remove("hidden");
-        alert("Resume changes saved!");
-    });
-    generateLinkButton.addEventListener("click", function () {
-        var uniqueID = Date.now();
-        var url = "https://username.vercel.app/resume?id=".concat(uniqueID);
-        shareLinkDiv.classList.remove("hidden");
-        resumeLink.href = url;
-        resumeLink.textContent = url;
-    });
     var file = img.files ? img.files[0] : null;
     if (file) {
         var reader = new FileReader();
@@ -119,13 +91,51 @@ form.addEventListener("submit", function (event) {
     if (skillsDisplay.innerHTML === '') {
         skillsDisplay.textContent = 'No Skills Selected';
     }
-    // downloadButton.addEventListener("click", function () {
-    //     const doc = new jsPDF();
-    //     doc.setFontSize(22);
-    //     doc.text("Resume", 20, 20);
-    //     doc.setFontSize(16);
-    //     doc.text("Name: " + myName.textContent, 20, 40);
-    //     doc.text("Experience: " + experience.textContent, 20, 60);
-    //     doc.save("resume.pdf");
-    // });
 });
+editButton.addEventListener("click", function () {
+    aboutMe.contentEditable = "true";
+    address.contentEditable = "true";
+    experience.contentEditable = "true";
+    email.contentEditable = "true";
+    homeNo.contentEditable = "true";
+    mobileNo.contentEditable = "true";
+    editButton.classList.add("hidden");
+    saveButton.classList.remove("hidden");
+});
+saveButton.addEventListener("click", function () {
+    aboutMe.contentEditable = "false";
+    address.contentEditable = "false";
+    experience.contentEditable = "false";
+    email.contentEditable = "false";
+    homeNo.contentEditable = "false";
+    mobileNo.contentEditable = "fasle";
+    saveButton.classList.add("hidden");
+    editButton.classList.remove("hidden");
+    alert("Resume changes saved!");
+});
+generateLinkButton.addEventListener("click", function () {
+    var uniqueID = Date.now();
+    var url = "https://username.vercel.app/resume?id=".concat(uniqueID);
+    shareLinkDiv.classList.remove("hidden");
+    resumeLink.href = url;
+    resumeLink.textContent = url;
+});
+// skillCheckboxes.forEach((checkbox) => {
+//     if (checkbox.checked) {
+//         const skillLine = document.createElement('p');
+//         skillLine.textContent = checkbox.value;
+//         skillsDisplay.appendChild(skillLine);
+//     }
+// });
+// if (skillsDisplay.innerHTML === '') {
+//     skillsDisplay.textContent = 'No Skills Selected';
+// }
+// downloadButton.addEventListener("click", function () {
+//     const doc = new jsPDF();
+//     doc.setFontSize(22);
+//     doc.text("Resume", 20, 20);
+//     doc.setFontSize(16);
+//     doc.text("Name: " + myName.textContent, 20, 40);
+//     doc.text("Experience: " + experience.textContent, 20, 60);
+//     doc.save("resume.pdf");
+// });

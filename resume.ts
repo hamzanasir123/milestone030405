@@ -105,8 +105,28 @@ matric.textContent = enteredMatric;
 const enteredExperience = userExperience.value;
 experience.textContent = enteredExperience.length > 0 ? enteredExperience : "No Experience Provided";
 
+const file = img.files ? img.files[0] : null;
 
+if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        userImg.src = e.target?.result as string;
+    };
+    reader.readAsDataURL(file);
+}
 
+skillCheckboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+        const skillLine = document.createElement('p');
+        skillLine.textContent = checkbox.value;
+        skillsDisplay.appendChild(skillLine);
+    }
+});
+
+if (skillsDisplay.innerHTML === '') {
+    skillsDisplay.textContent = 'No Skills Selected';
+}
+})
 editButton.addEventListener("click", function () {
     
     aboutMe.contentEditable = "true";
@@ -146,28 +166,6 @@ generateLinkButton.addEventListener("click", function () {
     resumeLink.textContent = url;
 });
 
-const file = img.files ? img.files[0] : null;
-
-if (file) {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-        userImg.src = e.target?.result as string;
-    };
-    reader.readAsDataURL(file);
-}
-
-skillCheckboxes.forEach((checkbox) => {
-    if (checkbox.checked) {
-        const skillLine = document.createElement('p');
-        skillLine.textContent = checkbox.value;
-        skillsDisplay.appendChild(skillLine);
-    }
-});
-
-if (skillsDisplay.innerHTML === '') {
-    skillsDisplay.textContent = 'No Skills Selected';
-}
-
 
 // downloadButton.addEventListener("click", function () {
 //     const doc = new jsPDF();
@@ -180,5 +178,3 @@ if (skillsDisplay.innerHTML === '') {
 //     doc.text("Experience: " + experience.textContent, 20, 60);
 //     doc.save("resume.pdf");
 // });
-
-})
